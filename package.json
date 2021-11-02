@@ -8,9 +8,6 @@
   },
   "author": "VA",
   "license": "ISC",
-  "engines": {
-    "node": "14.8.1"
-  },
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
