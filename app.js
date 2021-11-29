@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { urlencoded } = require("express")
 const express = require("express")
 const app = express()
@@ -8,7 +9,7 @@ app.set("view engine", "ejs")
 app.use(urlencoded({extended: true}))
 app.use(express.static("public"))
 
-const mongoURL = "mongodb+srv://va-admin:diokeren6@cluster0.gkfbx.mongodb.net/toDoListDB"
+const mongoURL = `mongodb+srv://va-admin:${process.env.SECRET}@cluster0.gkfbx.mongodb.net/toDoListDB`
 mongoose.connect(mongoURL)
 
 
